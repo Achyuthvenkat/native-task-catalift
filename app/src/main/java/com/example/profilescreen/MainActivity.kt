@@ -69,14 +69,12 @@ fun ProfileScreen() {
             .background(Color.White)
     ) {
         item {
-            // Header with back button and profile image
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(200.dp)
                     .background(Color.White)
             ) {
-                // Code background image
                 Image(
                     painter = painterResource(id = R.drawable.code_background),
                     contentDescription = "Code Background",
@@ -84,7 +82,6 @@ fun ProfileScreen() {
                     contentScale = ContentScale.Crop
                 )
 
-                // Back Button
                 IconButton(
                     onClick = { /* Handle back navigation */ },
                     modifier = Modifier
@@ -100,7 +97,6 @@ fun ProfileScreen() {
                     )
                 }
 
-                // Profile Image
                 Image(
                     painter = painterResource(id = R.drawable.profile_pic),
                     contentDescription = "Profile Picture",
@@ -116,7 +112,6 @@ fun ProfileScreen() {
 
             Spacer(modifier = Modifier.height(50.dp))
 
-            // Profile Info
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.padding(horizontal = 16.dp)
@@ -130,7 +125,6 @@ fun ProfileScreen() {
 
                     Spacer(modifier = Modifier.width(8.dp))
 
-                    // Verification Badge
                     Icon(
                         painter = painterResource(id = R.drawable.ic_verified),
                         contentDescription = "Verified",
@@ -139,7 +133,6 @@ fun ProfileScreen() {
                     )
                 }
 
-                // Rating
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier.padding(top = 4.dp)
@@ -165,7 +158,6 @@ fun ProfileScreen() {
                     modifier = Modifier.padding(top = 4.dp)
                 )
 
-                // Company and Education
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -206,7 +198,6 @@ fun ProfileScreen() {
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                // Action Buttons
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -246,7 +237,6 @@ fun ProfileScreen() {
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                // Bio
                 Text(
                     text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                     fontSize = 14.sp,
@@ -256,18 +246,14 @@ fun ProfileScreen() {
                 )
             }
 
-            // Experience Section
             SectionTitle(title = "Experience")
 
-            // Experience Items
             repeat(2) {
                 ExperienceItem()
             }
 
-            // Education Section
             SectionTitle(title = "Education")
 
-            // Education Items
             repeat(2) {
                 ExperienceItem()
             }
@@ -318,7 +304,6 @@ fun ExperienceItem() {
             .fillMaxWidth()
             .padding(horizontal = 16.dp, vertical = 8.dp)
     ) {
-        // Company logo
         Image(
             painter = painterResource(id = R.drawable.ic_google),
             contentDescription = "Company Logo",
@@ -369,7 +354,7 @@ fun ExperienceItem() {
 
             Spacer(modifier = Modifier.height(4.dp))
 
-            // Responsibilities
+
             ExperienceBulletPoint("Creating and refining design samples to kickstart projects for clients, ensuring their vision is well-represented from the outset.")
             ExperienceBulletPoint("Prototyping, designing, and building landing pages tailored to user needs and business goals.")
             ExperienceBulletPoint("Expanding my skill set by learning and integrating HTML and CSS into my workflow to enhance front-end development capabilities.")
